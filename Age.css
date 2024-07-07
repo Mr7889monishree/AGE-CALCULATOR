@@ -1,0 +1,240 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    background-color: rgb(99, 99, 217);
+    margin: 10% auto;
+    padding: 20px 20px;
+}
+.age-calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+.text1{
+    margin: 20px 10%;
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+}
+.text2{
+    margin: 10px 10%;
+    font-size: 23px;
+    font-weight: bolder;
+    color: rgb(254, 254, 118);
+}
+.task{
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    margin: 40px 10%;
+    padding: 35px;
+    width: 35%;
+}
+.task #input{
+    flex: 1;
+    margin-right: 20px;
+    padding: 15px;
+    width:50%;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+button{
+    padding: 15px 30px;
+    border-radius:15 px;
+    background-color:#ffff76;
+    color: #333;
+    border: none;
+    outline: none;  
+    font-size: 18px;
+    font-weight: 500; 
+    cursor: pointer;
+}
+.task #input::-webikt-calendar-picker-indicator{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+}
+.age-calculator #text{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 10%;
+    font-size: 20px;
+    color: white;
+    word-spacing: 20px;
+}
+#text span{
+    color: #ffff76;
+    padding: 5px;
+} 
+ */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(99, 99, 217);
+    margin: 5% auto;
+    padding: 20px;
+}
+
+.age-calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.text1, .text2 {
+    margin: 20px 10%;
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.text2 {
+    color: rgb(254, 254, 118);
+}
+
+.task {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin: 40px 10%;
+    padding: 35px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.task #input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 15px;
+    background-color: #ffff76;
+    color: #333;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.task #input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.age-calculator #text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 10%;
+    font-size: 20px;
+    color: white;
+    word-spacing: 20px;
+}
+
+#text span {
+    color: #ffff76;
+    padding: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .text1, .text2 {
+        font-size: 20px;
+    }
+
+    .task {
+        margin: 20px 5%;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .task #input {
+        margin-right: 10px;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .age-calculator #text {
+        margin: 0 5%;
+        font-size: 18px;
+        word-spacing: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text1, .text2 {
+        font-size: 18px;
+    }
+
+    .task {
+        margin: 10px 2%;
+        padding: 15px;
+        width: 96%;
+    }
+
+    .task #input {
+        margin-right: 5px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .age-calculator #text {
+        margin: 0 2%;
+        font-size: 16px;
+        word-spacing: 5px;
+    }
+}
